@@ -1,7 +1,7 @@
 {
-  "name": "three-geojson",
-  "version": "0.0.12",
-  "description": "Three.js shape loaders for GeoJSON and WKT formats.",
+  "name": "@wendylabsinc/three-geojson",
+  "version": "0.0.1",
+  "description": "Three.js shape loaders for GeoJSON and WKT formats. TypeScript fork with Storybook examples.",
   "type": "module",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -21,13 +21,36 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "build-examples": "vite build --config ./vite.config.js",
-    "lint": "eslint \"src/**/*.ts\" \"example/**/*.js\"",
+    "lint": "eslint \"example/**/*.js\"",
+    "typecheck": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendylabsinc/three-geojson.git"
+  },
+  "homepage": "https://wendylabsinc.github.io/three-geojson/",
+  "bugs": {
+    "url": "https://github.com/wendylabsinc/three-geojson/issues"
+  },
+  "keywords": [
+    "three",
+    "threejs",
+    "three.js",
+    "geojson",
+    "wkt",
+    "gis",
+    "map",
+    "globe",
+    "typescript"
+  ],
   "author": "Garrett Johnson <garrett.kjohnson@gmail.com>",
+  "contributors": [
+    "Wendy Labs <https://github.com/wendylabsinc>"
+  ],
   "license": "MIT",
   "dependencies": {
     "@kninnug/constrainautor": "^4.0.0",
@@ -59,5 +82,8 @@
     "3d-tiles-renderer": {
       "optional": true
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

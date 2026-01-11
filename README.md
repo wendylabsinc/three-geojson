@@ -19,14 +19,14 @@ Three.js shape loaders for [GeoJSON](https://geojson.org/) ([readable html](http
 ## Installation
 
 ```bash
-npm install github:wendylabsinc/three-geojson
+npm install @wendylabsinc/three-geojson
 ```
 
 ## Quick Start
 
 ```ts
-import { GeoJSONLoader } from 'three-geojson';
-import type { ParseResult, ParsedPolygon } from 'three-geojson';
+import { GeoJSONLoader } from '@wendylabsinc/three-geojson';
+import type { ParseResult, ParsedPolygon } from '@wendylabsinc/three-geojson';
 
 const loader = new GeoJSONLoader();
 const result: ParseResult = await loader.loadAsync('path/to/data.geojson');
@@ -183,7 +183,7 @@ Returns a line that merges the result of all the provided Polygons and LineStrin
 Loads and converts WKT files to GeoJSON using the [betterknown](https://github.com/placemark/betterknown) package, then parses using GeoJSONLoader.
 
 ```ts
-import { WKTLoader } from 'three-geojson';
+import { WKTLoader } from '@wendylabsinc/three-geojson';
 
 const loader = new WKTLoader();
 const result = await loader.loadAsync('path/to/data.wkt');
