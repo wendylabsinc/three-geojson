@@ -39,7 +39,9 @@ result.polygons.forEach((polygon: ParsedPolygon) => {
 
 ## Storybook Examples
 
-Run the interactive examples:
+**[View Live Storybook](https://wendylabsinc.github.io/three-geojson/)**
+
+Or run locally:
 
 ```bash
 npm install
@@ -47,7 +49,7 @@ npm run build
 npm run storybook
 ```
 
-Visit http://localhost:6006 to see:
+Available stories:
 - **Extruded** - Single country extrusion
 - **All Countries** - All countries extruded (flat)
 - **All Countries (10m Globe)** - High-resolution 10m data on WGS84 ellipsoid
