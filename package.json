@@ -4,13 +4,28 @@
   "description": "Three.js shape loaders for GeoJSON and WKT formats.",
   "type": "module",
   "sideEffects": false,
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "vite --config ./vite.config.js",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
     "build-examples": "vite build --config ./vite.config.js",
-    "lint": "eslint \"src/**.js\" \"example/**.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint \"src/**/*.ts\" \"example/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "Garrett Johnson <garrett.kjohnson@gmail.com>",
   "license": "MIT",
@@ -22,9 +37,18 @@
   },
   "devDependencies": {
     "3d-tiles-renderer": "^0.4.9",
+    "@storybook/addon-controls": "^8.4.7",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/html": "^8.4.7",
+    "@storybook/html-vite": "^8.4.7",
+    "@types/delaunator": "^5.0.3",
+    "@types/geojson": "^7946.0.15",
+    "@types/three": "^0.176.0",
     "eslint": "^8.57.1",
     "eslint-config-mdcs": "^5.0.0",
+    "storybook": "^8.4.7",
     "three": "^0.176.0",
+    "typescript": "^5.7.2",
     "vite": "^6.3.5"
   },
   "peerDependencies": {
